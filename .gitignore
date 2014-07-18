@@ -1,36 +1,24 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+*.iml
+.idea/
+.ipr
+.iws
+*~
+~*
+*.diff
+*.patch
+*.bak
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must ends with two \r.
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+Thumbs.db
+.project
+.*proj
+.svn/
+*.swp
+*.swo
+*.pyc
+*.pyo
+.build
+node_modules
+_site
+sea-modules
+.cache
+dist

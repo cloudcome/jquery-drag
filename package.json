@@ -1,0 +1,25 @@
+{
+  "name": "jquery-drag",
+  "version": "1.2.1",
+  "description": "A simple drag for jquery OR yquery",
+  "keywords": [
+    "jquery",
+    "yquery",
+    "ydr",
+    "drag"
+  ],
+  "author": {
+    "name":"cloudcome",
+    "email":"cloudcome@163.com"
+  },
+  "homepage": "https://ydr.me/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudcome/jquery-drag"
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "jquery-drag.js",
+    "dependencies": {}
+  }
+}
