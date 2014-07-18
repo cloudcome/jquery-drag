@@ -72,3 +72,9 @@ defaults = {
 };
 ````
 
+
+
+#SET OPTIONS
+```
+$.fn.drag.defaults;
+```
