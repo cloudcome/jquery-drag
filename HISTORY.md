@@ -2,6 +2,6 @@
 
 ---
 
-## 1.0.0
+## 1.2.1
 
-`new` It is the first version of jquery-drag.
+`new`
