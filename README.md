@@ -1,4 +1,8 @@
-# jquery-drag [![spm version](http://spmjs.io/badge/jquery-drag)](http://spmjs.io/package/jquery-drag)
+# jquery-drag
+
+---
+
+[![spm version](http://spmjs.io/badge/jquery-drag)](http://spmjs.io/package/jquery-drag)
 
 jQuery 鼠标拖拽插件
 
