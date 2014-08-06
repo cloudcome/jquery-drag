@@ -182,7 +182,7 @@ Constructor.prototype = {
                 $drag = options.drag ? $handle.closest(options.drag) : $element,
                 cssPos,
                 offset,
-                te = oe.touches ? oe.touches[0] : oe;
+                te = oe.touches ? oe.touches[0] : eve;
 
             if (!$element.has($drag).length) $drag = $element;
 
@@ -242,7 +242,7 @@ Constructor.prototype = {
                 offset = $drag.parent(!0).offset(),
                 minLeft, minTop, maxLeft, maxTop,
                 to = {},
-                te = oe.touches ? oe.touches[0] : oe;
+                te = oe.touches ? oe.touches[0] : eve;
 
 
             // axis
