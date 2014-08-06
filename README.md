@@ -1,26 +1,29 @@
 # jquery-drag [![spm version](http://spmjs.io/badge/jquery-drag)](http://spmjs.io/package/jquery-drag)
-AUTHOR WEBSITE: [http://ydr.me/](http://ydr.me/)
 
-A simple drag for jquery OR yquery
+jQuery 鼠标拖拽插件
 
-__IT IS [A spm package](http://spmjs.io/package/jquery-drag).__
+---
 
+## Install
 
-
-
-#usage
 ```
-var $ = require('jquery');
-require('jquery-drag')($);
+$ spm install jquery-drag --save
+```
 
+## Usage
+
+It is very easy to use this module.
+
+```js
+var $ = require('jquery-drag');
 $('#demo').drag();
 ```
 
 
+## Api
 
-#options
-````
-defaults = {
+```js
+$.fn.drag.defaults = {
     // 鼠标操作区域选择器，默认为this
     // 参数为选择器字符串
     handle: null,
@@ -70,11 +73,13 @@ defaults = {
     // arg1: instance
     ondragend: $.noop
 };
-````
-
-
-
-#SET OPTIONS
 ```
-$.fn.drag.defaults;
-```
+
+
+## Demo
+[http://spmjs.io/docs/jquery-drag/demo/](http://spmjs.io/docs/jquery-drag/demo/)
+
+
+## History
+[http://spmjs.io/docs/jquery-drag/history.html](http://spmjs.io/docs/jquery-drag/history.html)
+
