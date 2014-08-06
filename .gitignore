@@ -22,3 +22,6 @@ _site
 sea-modules
 .cache
 dist
+tests
+examples
+test
