@@ -26,6 +26,8 @@
 
 
 module.exports = function($) {
+    'use strict';
+    
     var datakey = 'jquery-drag',
         udf,
         win = window,
@@ -188,24 +190,23 @@ module.exports = function($) {
          * @version 1.0
          * 2014年7月3日18:29:40
          */
-        _start: function(e) {
+        _start: function(eve) {
             if (!this.is) {
-                e = e.originalEvent;
-                e.preventDefault();
-
-                var the = this,
+                var 
+                    oe = eve.originalEvent,
+                    the = this,
                     options = the.options,
                     $element = the.$element,
-                    $handle = options.handle ? $(e.target).closest(options.handle) : $(e.target),
+                    $handle = options.handle ? $(eve.target).closest(options.handle) : $(eve.target),
                     $drag = options.drag ? $handle.closest(options.drag) : $element,
                     cssPos,
                     offset,
-                    te = e.touches ? e.touches[0] : e;
+                    te = oe.touches ? oe.touches[0] : oe;
 
                 if (!$element.has($drag).length) $drag = $element;
 
                 the.$drag = $drag;
-                options.ondragbefore.call($drag[0], e, the);
+                options.ondragbefore.call($drag[0], eve, the);
 
                 the.zIndex = $drag.css('z-index');
                 the.cursor = $body.css('cursor');
@@ -231,7 +232,9 @@ module.exports = function($) {
                 the.is = !0;
                 if (the.options.cursor) $body.css('cursor', options.cursor);
 
-                options.ondragstart.call($drag[0], e, the);
+                options.ondragstart.call($drag[0], eve, the);
+
+                eve.preventDefault();
             }
         },
 
@@ -245,12 +248,11 @@ module.exports = function($) {
          * @version 1.0
          * 2014年7月3日18:29:40
          */
-        _move: function(e) {
+        _move: function(eve) {
             if (this.is) {
-                e = e.originalEvent;
-                e.preventDefault();
-
-                var the = this,
+                var 
+                    oe = eve.originalEvent,
+                    the = this,
                     options = the.options,
                     min = options.min,
                     max = options.max,
@@ -259,7 +261,7 @@ module.exports = function($) {
                     offset = $drag.parent(!0).offset(),
                     minLeft, minTop, maxLeft, maxTop,
                     to = {},
-                    te = e.touches ? e.touches[0] : e;
+                    te = oe.touches ? oe.touches[0] : oe;
 
 
                 // axis
@@ -283,7 +285,9 @@ module.exports = function($) {
                 }
 
                 $drag.offset(to);
-                options.ondrag.call($drag[0], e, the);
+                options.ondrag.call($drag[0], eve, the);
+
+                eve.preventDefault();
             }
         },
 
@@ -296,16 +300,16 @@ module.exports = function($) {
          * @version 1.0
          * 2014年7月3日18:29:40
          */
-        _end: function(e) {
+        _end: function(eve) {
             if (this.is) {
                 var the = this,
                     $drag = the.$drag;
 
-                e.preventDefault();
                 the.is = !1;
                 if (the.options.cursor) $body.css('cursor', the.cursor);
                 $drag.css('z-index', the.zIndex);
-                the.options.ondragend.call($drag[0], e, the);
+                the.options.ondragend.call($drag[0], eve, the);
+                eve.preventDefault();
             }
         },
 
