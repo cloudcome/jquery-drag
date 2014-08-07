@@ -19,12 +19,20 @@ $ spm install jquery-drag --save
 It is very easy to use this module.
 
 ```js
-var $ = require('jquery-drag');
+// require jquery
+var $ = require('jquery');
+
+// extend jquery.fn
+require('jquery-drag')($);
+
+// use
 $('#demo').drag();
 ```
 
 
 ## Api
+
+### Options
 
 ```js
 $.fn.drag.defaults = {
@@ -77,6 +85,22 @@ $.fn.drag.defaults = {
     // arg1: instance
     ondragend: $.noop
 };
+```
+
+
+### Functions
+
+#### options
+```js
+// get options
+$('#demo').drag('options');
+
+// set options
+$('#demo').drag('options', 'zIndex', 9999);
+$('#demo').drag('options', {
+    axis: 'x',
+    cursor: 'auto'
+});
 ```
 
 

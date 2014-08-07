@@ -1,6 +1,6 @@
 {
   "name": "jquery-drag",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "jQuery 鼠标拖拽插件",
   "keywords": [
     "jquery",
@@ -24,8 +24,6 @@
   "licenses": "MIT",
   "spm": {
     "main": "jquery-drag.js",
-    "dependencies": {
-      "jquery": "1.11.1"
-    }
+    "dependencies": {}
   }
 }
