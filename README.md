@@ -105,7 +105,7 @@ $('#demo').drag('options', {
 
 
 ## Demo
-[http://spmjs.io/docs/jquery-drag/demo/](http://spmjs.io/docs/jquery-drag/demo/)
+[http://spmjs.io/docs/jquery-drag/examples/index.html](http://spmjs.io/docs/jquery-drag/examples/index.html)
 
 
 ## History
